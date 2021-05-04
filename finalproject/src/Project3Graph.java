@@ -9,9 +9,10 @@ public class Project3Graph <T extends Comparable<T>> implements Project3GraphADT
 
     private int numNodes;
     private int numEdges;
-    private int[][] adjArray;
-    private Node[] NodeArray;
+    private int[][] adjArray; // adjacency matrix
+    private Node[] NodeArray; // stores the node information
 
+    // private class to create a Node storage variable
     private class Node <T extends Comparable<T>>
     {
         String id;
@@ -28,6 +29,10 @@ public class Project3Graph <T extends Comparable<T>> implements Project3GraphADT
             this.value = value;
         }
 
+        /**
+         * returns a string value of the Node in the form id(value)
+         * @return string
+         */
         @Override
         public String toString()
         {
